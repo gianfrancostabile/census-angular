@@ -1,0 +1,13 @@
+<div class="person-card">
+  <ng-container *ngIf="person; then success; else error"></ng-container>
+  <ng-template #success>
+    <span><strong>Nombre: </strong> {{ person.name }}</span>
+    <span><strong>Apellido: </strong> {{ person.surname }}</span>
+    <span><strong>Fecha de Nacimiento: </strong> {{ person.bornDate }}</span>
+    <span><strong>Nacionalidad: </strong> {{ person.country }}</span>
+    <span><strong>Género: </strong> {{ person.genre }}</span>
+  </ng-template>
+  <ng-template #error>
+    <span>La persona no existe</span>
+  </ng-template>
+</div>

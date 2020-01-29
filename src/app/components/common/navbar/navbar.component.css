@@ -1,0 +1,46 @@
+.navbar,
+.navbar > div,
+.navbar > div > aside {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+
+  background-color: #004c9e;
+  padding: 0 10px;
+
+  z-index: 1000;
+}
+
+.navbar * {
+  height: 100%;
+}
+
+.navbar > div {
+  justify-content: space-between;
+  flex-grow: 2;
+}
+
+.navbar > div > aside {
+  justify-content: space-evenly;
+}
+
+.navbar ::ng-deep * {
+  height: 100%;
+}
+
+.navbar ::ng-deep button{
+  color: white;
+}
+
+.navbar ::ng-deep button:hover,
+.navbar ::ng-deep button.active {
+  background-color: #1b5da5;
+}

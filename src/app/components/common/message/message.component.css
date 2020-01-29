@@ -1,0 +1,18 @@
+.message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px;
+
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.message.error {
+  border-color: #f33e29;
+  background-color: #fa8072;
+  color: #ffffff;
+}

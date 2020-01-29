@@ -1,0 +1,4 @@
+<app-spinner *ngIf="spin; else conditionSuccess"></app-spinner>
+<ng-template #conditionSuccess>
+  <ng-content></ng-content>
+</ng-template>

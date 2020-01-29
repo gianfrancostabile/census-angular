@@ -1,0 +1,17 @@
+<nav class="navbar">
+  <app-navbar-button [buttonData]="navbarData.home"></app-navbar-button>
+  <div>
+    <aside>
+      <app-navbar-button
+        *ngFor="let button of navbarData.leftItems"
+        [buttonData]="button"
+      ></app-navbar-button>
+    </aside>
+    <aside>
+      <app-navbar-button
+        *ngFor="let button of navbarData.rightItems"
+        [buttonData]="button"
+      ></app-navbar-button>
+    </aside>
+  </div>
+</nav>

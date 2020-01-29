@@ -1,0 +1,15 @@
+.home h1 {
+  text-align: center;
+}
+.home ol > li {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.home ol > li p {
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+.home ol > li:nth-last-child(1) {
+  margin-bottom: 0;
+}

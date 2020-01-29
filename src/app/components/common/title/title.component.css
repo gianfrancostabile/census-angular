@@ -1,0 +1,24 @@
+.title {
+  text-align: center;
+  border: 3px double black;
+  padding: 15px;
+
+  font-size: 5vmax;
+  font-family: 'Fira Code';
+  font-weight: normal;
+}
+
+@media (max-width: 575.98px) { 
+  .title {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 575.99px) and (max-width: 767.98px) {
+}
+
+@media (min-width: 767.99px) and (max-width: 991.98px) {
+}
+
+@media (min-width: 991.99px) and (max-width: 1199.98px) {
+}

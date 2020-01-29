@@ -1,0 +1,41 @@
+<form class="form" [formGroup]="formGroup">
+  <div *ngFor="let field of formData.fields" class="form-group">
+    <label [for]="field.name">{{ field.label }}</label>
+    <ng-container [ngSwitch]="field.type">
+      <select
+        *ngSwitchCase="'select'"
+        [id]="field.name"
+        [formControlName]="field.name"
+      >
+        <option value="" disabled>Seleccione una opción...</option>
+        <option *ngFor="let option of field.options" [value]="option.value">{{
+          option.name
+        }}</option>
+      </select>
+      <input
+        *ngSwitchDefault
+        [type]="field.type"
+        [id]="field.name"
+        [formControlName]="field.name"
+      />
+    </ng-container>
+  </div>
+  <app-message *ngIf="errorMessage">
+    {{ errorMessage }}
+  </app-message>
+  <div class="form-button-group">
+    <button
+      *ngFor="let button of formData.buttons"
+      (click)="button.action()"
+      [class]="button.style"
+    >
+      {{ button.value }}
+    </button>
+    <ng-container *ngIf="isLoading != undefined">
+      <app-spinner *ngIf="isLoading === true; else blank"></app-spinner>
+      <ng-template #blank>
+        <div id="blank"></div>
+      </ng-template>
+    </ng-container>
+  </div>
+</form>

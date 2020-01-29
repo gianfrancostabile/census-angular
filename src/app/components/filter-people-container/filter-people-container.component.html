@@ -1,0 +1,22 @@
+<div class="filter-people-form">
+  <app-component-or-spinner [spin]="waitingCountries">
+    <ng-container
+      *ngIf="countries.length; then content; else error"
+    ></ng-container>
+    <ng-template #content>
+      <app-title>Buscá a una persona</app-title>
+      <app-filter-people-form
+        [countries]="countries"
+        (formSubmit)="onFormSubmit($event)"
+      ></app-filter-people-form>
+      <app-component-or-spinner [spin]="waitingPerson" *ngIf="drawPersonCard">
+        <app-filter-person-card-container
+          [person]="person"
+        ></app-filter-person-card-container>
+      </app-component-or-spinner>
+    </ng-template>
+    <ng-template #error>
+      <app-message>Ocurrió un error al cargar la página. Inténtelo más tarde</app-message>
+    </ng-template>
+  </app-component-or-spinner>
+</div>

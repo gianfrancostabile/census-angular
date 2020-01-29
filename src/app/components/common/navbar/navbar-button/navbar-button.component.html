@@ -1,0 +1,13 @@
+<ng-container *ngIf="isLink; then linkButton; else actionButton"></ng-container>
+<ng-template #linkButton>
+  <button
+    [routerLink]="buttonData.link"
+    [routerLinkActiveOptions]="{ exact: true }"
+    routerLinkActive="active"
+  >
+    {{ buttonData.content }}
+  </button>
+</ng-template>
+<ng-template #actionButton>
+  <button (click)="buttonData.action()">{{ buttonData.content }}</button>
+</ng-template>

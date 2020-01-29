@@ -1,0 +1,26 @@
+.person-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  
+  background-color: white;
+  border: 5px solid #004c9e;
+  padding: 20px;
+}
+.person-card::before,
+.person-card::after {
+  content: '';
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  background-color: white;
+}
+.person-card::before {
+  top: -5px;
+  bottom: 100%;
+}
+.person-card::after {
+  top: 100%;
+  bottom: -5px;
+}
